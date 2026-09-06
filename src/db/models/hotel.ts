@@ -17,8 +17,8 @@ import {
     declare location: string;
     declare createdAt: CreationOptional<Date>;
     declare updatedAt: CreationOptional<Date>;
-    declare rating: number;
-    declare ratingCount: number;
+    declare rating?: number;
+    declare ratingCount?: number;
   }
   
   Hotel.init(
