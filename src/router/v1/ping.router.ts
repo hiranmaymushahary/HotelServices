@@ -6,7 +6,8 @@ import { pingSchema } from "../../validators/ping.validator";
 
 const pingRouter = express.Router();
 
-pingRouter.get("/", validate(pingSchema),pingHandler);
+// Pass an object containing query and/or body schemas
+pingRouter.get("/", validate({ query: pingSchema }), pingHandler);
 
 pingRouter.get("/health",(req,res)=>{
     res.status(200).send("ok");
